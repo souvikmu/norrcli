@@ -1,0 +1,43 @@
+{
+	"name": "norrcli",
+	"version": "1.0.0",
+	"description": "A CLI for chuck norris API",
+	"main": "build/src/index.js",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"start": "ts-node-dev --respawn src/index.ts",
+		"dev": "nodemon --exec ts-node src/index.ts",
+		"build": "tsc"
+	},
+	"keywords": [
+		"API",
+		"norrcli",
+		"typescript",
+		"Node.JS",
+		"CLI"
+	],
+	"author": {
+		"name": "Souvik Mukherjee",
+		"url": "https://www.github.com/souvikmu"
+	},
+	"license": "ISC",
+	"bin": {
+		"norrcli": "./build/index.js"
+	},
+	"bugs": {
+		"url": "https://github.com/github.com/souvikmu/issues"
+	},
+	"dependencies": {
+		"axios": "^0.27.2",
+		"chalk": "^5.0.1",
+		"commander": "^9.4.0"
+	},
+	"devDependencies": {
+		"@types/node": "^18.6.5",
+		"nodemon": "^2.0.19",
+		"ts-node": "^10.9.1",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^4.7.4"
+	}
+}

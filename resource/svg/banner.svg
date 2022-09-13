@@ -1,0 +1,149 @@
+<svg fill="" viewBox="0 0 600 130" width="50%" height="50%" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <style type="text/css">
+                /* variables */
+                :root {
+                    --delay: 4s;
+                    --cl-redheart: rgba(52, 152, 219, 0.9);
+                    --cl-blueheart: rgba(231, 76, 60, 0.9);
+                    --cl-maincolor: rgba(236, 240, 241, 1.0)
+                }
+
+                /* defaults */
+                *:root,
+                *::before,
+                *::after {
+                    box-sizing: border-box;
+                }
+
+                a,
+                a:active,
+                a:focus,
+                a:hover {
+                    text-decoration: none;
+                    outline: none;
+                    color: inherit;
+                    cursor: pointer;
+                }
+
+                /* keyframes */
+                @keyframes vibrate {
+                    0% {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.03);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+
+                @keyframes redheart {
+                    0% {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.06);
+                        opacity: 0.08;
+                    }
+
+                    100% {
+                        transform: scale(1);
+                        opacity: 0;
+                    }
+                }
+
+                @keyframes blueheart {
+                    0% {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.11);
+                        opacity: 0.05;
+                    }
+
+                    100% {
+                        transform: scale(1.0);
+                        opacity: 0;
+                    }
+                }
+
+                @keyframes bgani {
+                    0% {
+                        background-position: 0%
+                    }
+
+                    50% {
+                        background-position: 50% 100%
+                    }
+
+                    100% {
+                        background-position: 0% 50%
+                    }
+                }
+
+                /* link container */
+                .container {
+                    display: flex;
+                    justify-content: center;
+                    color: var(--cl-maincolor);
+                    padding: 3em;
+                    border-radius: 30px;
+                    font-size: 10px;
+                    background:
+                        linear-gradient(45deg,
+                            #BF3312 0%,
+                            #242B2E 35% 60%,
+                            #BF3312 100%);
+                    background-size: 300% 300%;
+                    animation: bgani 20s ease infinite;
+                }
+
+                /* norrislink */
+                .norrislink {
+                    position: relative;
+                    font-size: 3rem;
+                    font-family: "Roboto";
+                    animation: vibrate var(--delay) infinite ease;
+                    z-index: 1;
+                }
+
+                .norrislink::before,
+                .norrislink::after {
+                    content: "Norrcli";
+                    position: absolute;
+                    translate: translate(-50%%, -50%);
+                    z-index: -1;
+                }
+
+                .norrislink::before {
+                    top: 0%;
+                    left: 0%;
+                    transform: scale(1);
+                    color: var(--cl-redheart);
+                    animation: redheart var(--delay) ease-in-out infinite;
+                }
+
+                .norrislink::after {
+                    top: 0%;
+                    left: 0%;
+                    transform: scale(1);
+                    color: var(--cl-blueheart);
+                    animation: blueheart var(--delay) ease-in-out infinite;
+                }
+            </style>
+
+            <div class="container">
+                <a class="norrislink" href="https://api.chucknorris.io">
+                    Norrcli
+                </a>
+            </div>
+        </div>
+    </foreignObject>
+</svg>

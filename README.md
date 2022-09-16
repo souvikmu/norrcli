@@ -18,3 +18,8 @@ This is a simplistic CLI application built using typescript and Node.JS that fet
 | norrcli |                | -h, --help     |            | man page                    |
 | norrcli |                | -V, --version  |            | displays the version number |
 | norrcli | \<subcommand\> | -h, --help     |            | help on the \<subcommand\>  |
+
+
+---
+
+__It's quite a simple piece of project, however I sincerely hope whoever comes across this repository, finds it entertaining. Thank you.__
